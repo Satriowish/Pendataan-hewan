@@ -1,0 +1,70 @@
+/* CSS untuk tabel */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 80%;
+    margin: 15px auto;
+    padding: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+}
+
+.table-container {
+    margin-bottom: 15px; 
+}
+
+.form-container {
+    text-align: center; 
+}
+
+
+.edit-btn, .delete-btn, .submit-btn {
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none; 
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px; 
+}
+
+.edit-btn {
+    background-color: rgb(35, 35, 185); 
+}
+
+.delete-btn {
+    background-color: rgb(201, 35, 35); 
+    margin-left: 10px; 
+}
+
+.submit-btn {
+    background-color: green; /
+}
+
+
+/* CSS untuk form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 10px auto;
+    width: 80%; 
+}
+form input {
+    margin: 5px 0; 
+    padding: 10px;
+    width: 100%; 
+}
