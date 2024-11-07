@@ -6,9 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $jenis = $_POST['jenis'];
     $umur = $_POST['umur'];
     $jumlah = $_POST['jumlah'];
-    if ($jumlah <= 0) {
-        echo "<script>alert('Jumlah tidak boleh kurang dari 1.');</script>";
-    } else {
         $sql = "INSERT INTO hewan (nama, jenis, umur, jumlah) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         if ($stmt->execute([$nama, $jenis, $umur, $jumlah])) {
@@ -16,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
     }
   }
-}
+
 // ----------
 $id_hewan = $_GET['hapus_id'] ?? null;
 if ($id_hewan) {

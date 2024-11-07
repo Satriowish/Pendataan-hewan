@@ -7,10 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $jenis = $_POST['jenis'];
     $umur = $_POST['umur'];
     $jumlah = $_POST['jumlah'];
-    
-    if ($jumlah <= 0) {
-        echo "<script>alert('Jumlah tidak boleh kurang dari 1.');</script>";
-    } else {
+
         $sql = "UPDATE hewan SET nama = ?, jenis = ?, umur = ?, jumlah = ? WHERE id_hewan = ?";
         $stmt = $conn->prepare($sql);
 
@@ -19,8 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
     }
  }
-}
-// Ambil data hewan untuk ditampilkan di form
+// data hewan 
 $sql = "SELECT * FROM hewan WHERE id_hewan = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$id_hewan]);
